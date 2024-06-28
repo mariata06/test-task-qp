@@ -17,6 +17,14 @@
   }
 }
 
+.main-container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 100%;
+}
+
 .visually-hidden {
   position: absolute;
 

@@ -14,13 +14,11 @@
   }
 
   &__mobile-menu {
-    list-style: none;
     background-color: #A6C9FF;
     width: 451px;
     min-height: 500px;
     padding: 33px 65px 57px;
     color: #fff;
-    margin: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,6 +32,12 @@
 
   &__mobile-menu.is-active {
     transform: translateX(0);
+  }
+
+  &__menu-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
   }
 
   &__item {
@@ -75,25 +79,6 @@
     margin: 0 auto;
     display: block;
     margin-top: 16px;
-  }
-}
-
-
-.main-container {
-  overflow: hidden;
-  position: relative;
-  margin: 0 auto;
-  max-width: 1170px;
-  width: 100%;
-}
-
-
-@media (max-width: 1170px) {
-  .main-nav__mobile-menu {
-    // width: 350px;
-    // padding-left: 40px;
-    // padding-right: 40px;
-    // transform: translateX(-350px);
   }
 }
 
