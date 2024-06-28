@@ -1,0 +1,49 @@
+.yellow-green .container {
+  padding: 40px 25px;
+}
+
+.yellow-green__wrapper {
+  background-color: #D4FF5A;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.yellow-green__item {
+  background-color: #497957;
+  border-radius: 35px;
+  border: 2px solid #00FF4A;
+  width: auto;
+  height: auto;
+  padding-top: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.yellow-green__item:hover {
+  filter: drop-shadow(2px 5px 10px #497957);
+}
+
+.yellow-green__item.is-active {
+  filter: drop-shadow(2px 5px 10px #497957);
+}
+
+.yellow-green__title {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 46px;
+}
+
+@media (max-width: 767px) {
+  .yellow-green__wrapper {
+    padding: 10px;
+    gap: 10px;
+  }
+}

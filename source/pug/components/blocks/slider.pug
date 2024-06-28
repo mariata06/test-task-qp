@@ -1,0 +1,21 @@
+mixin slider()
+  .slider
+    .container
+      .slider__slides
+        .slider__slide.slider__slide--purple-heart
+          h1.slider__title slide 1
+          label.slider__modal-btn.btn.btn--open-modal.is-active(for="modal-toggle", aria-label="Открыть модальное окно") Open pop-up button
+
+        .slider__slide.slider__slide--biloba-flower
+          h1.slider__title slide 2
+          label.slider__modal-btn.btn.btn--open-modal(for="modal-toggle", aria-label="Открыть модальное окно") Open pop-up button
+
+        .slider__slide.slider__slide--lime-green
+          h1.slider__title slide 3
+          label.slider__modal-btn.btn.btn--open-modal(for="modal-toggle", aria-label="Открыть модальное окно") Open pop-up button
+
+      button.btn.slider__btn-prev(type="button", aria-label="slide prev", aria-pressed="false")
+        +icon("arrow-left", 37, 75)
+
+      button.btn.slider__btn-next(type="button", aria-label="slide next", aria-pressed="false")
+        +icon("arrow-left", 37, 75)

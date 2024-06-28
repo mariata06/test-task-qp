@@ -10,7 +10,7 @@ html(lang="ru")
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    meta(name="description", content="ProjectName — описание")
+    meta(name="description", content="Test task on Quality Performance")
     //- генерируйте favicon тут - https://realfavicongenerator.net/
     //- в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"
     //- используйте только для шрифта находящегося на первом экране
@@ -27,21 +27,25 @@ html(lang="ru")
       //- Введите адрес сайта
       meta(property="og:url", content="https://24fortest.ru/")
       //- Введите описание
-      meta(property="og:description", content="Простые и понятные решения в помощь разработчикам от команды Лига А")
+      meta(property="og:description", content="Test task on Quality Performance")
 
     link(rel="stylesheet", href="css/style.min.css")
 
   body
     .wrapper(class=wrapperMods)
-      if (hasHeader)
-        +header(headerMods, currentUrl)
+      .side-bar-left
 
-      block main
+      .main-container
+        if (hasHeader)
+          +header(headerMods, currentUrl)
 
-      if (hasFooter)
-        +footer(footerMods)
+        block main
+
+        if (hasFooter)
+          +footer(footerMods)
+
+      .side-bar-right
 
     block modals
 
-    script(src="js/vendor.min.js")
     script(src="js/main.min.js")

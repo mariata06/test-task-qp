@@ -2,15 +2,11 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 8.4.7
-// @import "vendor/swiper";
 
 // Global
 // ---------------------------------
 
 @import "variables";
-@import "mixins";
-@import "functions";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -24,10 +20,10 @@
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/btn";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
-@import "blocks/input-upload";
+@import "blocks/slider";
+@import "blocks/grid";
+@import "blocks/yellow-green";
+@import "blocks/bottom-block";
 
 // ---------------------------------
 

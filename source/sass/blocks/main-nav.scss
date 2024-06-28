@@ -1,27 +1,118 @@
 .main-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 55px 54px 48px;
+
   &__list {
     display: flex;
     margin: 0;
     margin-right: 20px;
-    margin-left: 60px;
     padding: 0;
-
     list-style: none;
+    margin-left: 103px;
+  }
+
+  &__mobile-menu {
+    list-style: none;
+    background-color: #A6C9FF;
+    width: 451px;
+    min-height: 500px;
+    padding: 33px 65px 57px;
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-461px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    border: 1px solid #00FF4A;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mobile-menu.is-active {
+    transform: translateX(0);
   }
 
   &__item {
     margin-right: 20px;
+    margin-right: 62px;
   }
 
   &__link {
     color: $color-default-white;
+    font-size: 28px;
+    line-height: 45px;
 
     &.is-active {
-      opacity: 0.6;
+      text-decoration: underline;
     }
+  }
+
+  &__mobile-menu-item {
+    margin-bottom: 39px;
+  }
+
+  &__mobile-menu-link {
+    color: #fff;
+    font-size: 28px;
+    line-height: 45px;
+    font-weight: 500;
   }
 
   &__toggle {
     display: none;
+    display: block;
+    order: 2;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  &__modal-btn {
+    margin: 0 auto;
+    display: block;
+    margin-top: 16px;
+  }
+}
+
+
+.main-container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 100%;
+}
+
+
+@media (max-width: 1170px) {
+  .main-nav__mobile-menu {
+    // width: 350px;
+    // padding-left: 40px;
+    // padding-right: 40px;
+    // transform: translateX(-350px);
+  }
+}
+
+@media (max-width: 767px) {
+  .main-nav__mobile-menu {
+    min-height: 450px;
+    padding: 20px;
+    width: 250px;
+    transform: translateX(-250px);
+  }
+
+  .main-nav {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .main-nav__list {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 }

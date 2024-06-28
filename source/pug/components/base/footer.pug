@@ -1,3 +1,32 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "Text"
+      },
+      {
+        href: "#",
+        text: "Text"
+      },
+      {
+        href: "#",
+        text: "Text"
+      },
+      {
+        href: "#",
+        text: "Text"
+      },
+    ]
+    
   footer.footer(class=footerMods)
     .container
+      .footer__nav
+        ul.footer__nav-list
+          each link in footerLinks
+            - const activeState = currentUrl === link.href
+            li.footer__nav-item
+              if(activeState)
+                span.footer__nav-link.is-active= link.text
+              else
+                a.footer__nav-link(href=link.href)= link.text

@@ -1,0 +1,11 @@
+<!-- Модальное окно -->
+mixin modal()
+  //- Скрытый чекбокс для управления модальным окном
+  input(type="checkbox" id="modal-toggle")
+
+  div(class="modal")
+    div(class="modal-content")
+
+      label(for="modal-toggle" class="btn btn--close-modal") X
+      h2.modal__title Pop-up
+

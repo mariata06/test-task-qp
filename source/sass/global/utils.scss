@@ -1,10 +1,8 @@
 .wrapper {
   position: relative;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 
   .header,
@@ -14,17 +12,9 @@
 
   main {
     flex-grow: 1;
+    max-width: 1170px;
+    margin: 0 auto;
   }
-}
-
-.rouble {
-  /* stylelint-disable */
-  font-weight: 400 !important;
-  /* stylelint-enable */
-  font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  /* stylelint-enable */
 }
 
 .visually-hidden {
@@ -44,30 +34,7 @@
   clip-path: inset(100%);
 }
 
-.scroll-lock-ios {
-  position: fixed;
-
-  overflow: hidden;
-}
-
-.scroll-lock {
-  overflow: hidden;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 .no-transition {
   /* stylelint-disable-next-line */
   transition: none !important;
-}
-
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
 }

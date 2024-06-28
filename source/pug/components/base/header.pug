@@ -3,28 +3,44 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Text"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Text"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Text"
+      },
+    ]
+
+  -
+    const mobileMenuLinks = [
+      {
+        href: "#",
+        text: "Text"
+      },
+      {
+        href: "#",
+        text: "Text"
+      },
+      {
+        href: "#",
+        text: "Text"
+      },
+      {
+        href: "#",
+        text: "Text"
       },
     ]
 
   header.header(class=headerMods)
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+        button.main-nav__toggle.btn.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+          +icon("burger", 44, 27).main-nav__open
+          +icon("cross", 44, 24).main-nav__close
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
@@ -34,3 +50,14 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active= link.text
                 else
                   a.main-nav__link(href=link.href)= link.text
+
+        ul.main-nav__mobile-menu
+          each link in mobileMenuLinks
+            - const activeState = currentUrl === link.href
+            li.main-nav__mobile-menu-item
+              if(activeState)
+                span.main-nav__mobile-menu-link.is-active= link.text
+              else
+                a.main-nav__mobile-menu-link(href=link.href)= link.text
+
+          label.main-nav__modal-btn.btn.btn--open-modal(for="modal-toggle", aria-label="Открыть модальное окно") Open pop-up button

@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Test task Quality Performance" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
@@ -11,8 +11,10 @@ block variables
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
-    +intro()
+    +slider()
+    +grid()
+    +yellow-green()
+    +bottom-block()
 
 block modals
+  +modal()

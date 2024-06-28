@@ -1,26 +1,87 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
   color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  padding: 0;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
 
   &:disabled {
     opacity: 0.5;
 
     pointer-events: none;
   }
+}
 
-  @include hover-focus {
-    opacity: 0.8;
+.btn--open-modal {
+  background-color: #FF4B4B;
+  border-radius: 25px;
+  color: #fff;
+  border: 0;
+  padding: 17px 25px;
+  max-height: 58px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  border: none;
+}
+
+.btn--open-modal:hover {
+  filter: drop-shadow(2px 5px 10px #497957);
+}
+
+.btn--open-modal.is-active {
+  filter: drop-shadow(2px 5px 10px #497957);
+}
+
+.btn-reset {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+
+.btn-reset .main-nav__close,
+.btn-reset .main-nav__open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-out;
+}
+
+.btn-reset .main-nav__close {
+  opacity: 0;
+  z-index: 1;
+}
+
+.btn-reset .main-nav__open {
+  opacity: 1;
+  z-index: 100;
+}
+
+.btn-reset .main-nav__open:hover {
+  opacity: 0.7;
+}
+
+.btn-reset.is-active .main-nav__close {
+  opacity: 1;
+  z-index: 100;
+}
+
+.btn-reset.is-active .main-nav__open {
+  opacity: 0;
+  z-index: 1;
+}
+
+.btn-reset.is-active .main-nav__close:hover {
+  opacity: 0.7;
+}
+
+
+@media (max-width: 767px) {
+  .btn--open-modal {
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }
