@@ -6,6 +6,7 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     margin-right: 20px;
     padding: 0;
@@ -38,10 +39,11 @@
     list-style: none;
     padding-left: 0;
     margin: 0;
+    overflow-y: auto;
+    max-height: 336px;
   }
 
   &__item {
-    margin-right: 20px;
     margin-right: 62px;
   }
 
@@ -49,9 +51,18 @@
     color: $color-default-white;
     font-size: 28px;
     line-height: 45px;
+    transition: all 0.3s ease-out;
 
     &.is-active {
       text-decoration: underline;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 
@@ -67,7 +78,6 @@
   }
 
   &__toggle {
-    display: none;
     display: block;
     order: 2;
     border: none;
